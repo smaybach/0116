@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dingdan.activity.DingActivity">
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="20sp"
+            android:text="订单列表"/>
+        <ImageView
+            android:id="@+id/image_btn"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:clickable="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/lv_icon"/>
+    </RelativeLayout>
+
+
+    <!--最下边为RadioGroup-->
+    <RadioGroup
+        android:layout_below="@+id/rl"
+        android:id="@+id/radioGroup"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--第一个RadioButton-->
+        <RadioButton
+            android:id="@+id/button_1"
+            android:text="全部"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <!--第二个RadioButton-->
+        <RadioButton
+            android:id="@+id/button_2"
+            android:text="待支付"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_weight="1"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <!--第三个RadioButton-->
+        <RadioButton
+            android:id="@+id/button_3"
+            android:text="已取消"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <!--第四个RadioButton-->
+        <RadioButton
+            android:id="@+id/button_4"
+            android:text="已支付"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RadioGroup>
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_below="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+</RelativeLayout>
